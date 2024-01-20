@@ -4,6 +4,7 @@ django-appconf==1.0.6
 django-ckeditor==6.7.0
 django-compressor==4.4
 django-js-asset==2.1.0
+django-pipeline==3.0.0
 rcssmin==1.1.1
 rjsmin==1.2.1
 sqlparse==0.4.4
