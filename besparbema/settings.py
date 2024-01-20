@@ -132,10 +132,10 @@ STATICFILES_FINDERS = [
     # 'pipeline.finders.PipelineFinder',
 ]
 
-COMPRESS_CSS_FILTERS = {
-    'css': ['compressor.filters.css_default.CssAbsoluteFilter'], 
-    'js': ['compressor.filters.jsmin.JSMinFilter']
-}
+# COMPRESS_CSS_FILTERS = {
+#     'css': ['compressor.filters.css_default.CssAbsoluteFilter'], 
+#     'js': ['compressor.filters.jsmin.JSMinFilter']
+# }
 
 COMPRESS_ENABLED = True
 COMPRESS_OFFLINE = True
