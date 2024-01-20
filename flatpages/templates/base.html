@@ -1,9 +1,12 @@
 {% load compress %}
+{% load cache %}
 
 <!DOCTYPE html>
 <html lang="fa-ir">
-    <!-- Mirrored from html.themerange.net/kanstr/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 25 Nov 2023 22:29:12 GMT -->
     <head>
+
+        <title>{% block title %}{% endblock %}</title>
+        {% cache 2400 header %}
         <!-- Essetial Meta Tags -->
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -19,6 +22,9 @@
         <meta name="author" content="Amirreza Yarahmadi" />
         <meta name="copyright" content="Bespar copyright" />
         <meta name="creator" content="Amirreza Yarahmadi" />
+
+        <!-- Theme -->
+        <meta name="theme-color" content="#0093dd" />
 
         <!-- Open Graph Facebook and WhatsApp -->
         <meta property="og:type" content="website" />
@@ -138,10 +144,27 @@
         />
 
 
+        <!-- <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&amp;family=Roboto:wght@100;300;400;500;700;900&amp;display=swap"
+            rel="stylesheet"
+        /> -->
+        <link
+            rel="shortcut icon"
+            href="/static/images/favicon.png"
+            type="image/x-icon"
+        />
+        <link rel="icon" href="/static/images/favicon.png" type="image/x-icon" />
+
+        <!--[if lt IE 9
+            ]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script
+        ><![endif]-->
+        <!--[if lt IE 9
+            ]><script src="/static/js/respond.js"></script
+        ><![endif]-->
+
+        {% endcache %}
+
         {% compress css %}
-        <!-- Theme -->
-        <meta name="theme-color" content="#0093dd" />
-        <title>{% block title %}{% endblock %}</title>
         <!-- Stylesheets -->
         <link href="/static/css/bootstrap.css" rel="stylesheet" />
         <link href="/static/css/style.css" rel="stylesheet" />
@@ -168,26 +191,6 @@
 
         {% endcompress %}
 
-        
-
-
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&amp;family=Roboto:wght@100;300;400;500;700;900&amp;display=swap"
-            rel="stylesheet"
-        />
-        <link
-            rel="shortcut icon"
-            href="/static/images/favicon.png"
-            type="image/x-icon"
-        />
-        <link rel="icon" href="/static/images/favicon.png" type="image/x-icon" />
-
-        <!--[if lt IE 9
-            ]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script
-        ><![endif]-->
-        <!--[if lt IE 9
-            ]><script src="/static/js/respond.js"></script
-        ><![endif]-->
     </head>
 
     <body style="font-family: iranyekan">

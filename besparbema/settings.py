@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-&xhjtn)t_d$hso3rm8^ckel01kq_m!aty&5@b!z7i!9a2g2=md
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['localhost', 'bespar.liara.run', '127.0.0.1']
 
 
 # Application definition
@@ -51,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.gzip.GZipMiddleware',
 ]
 
 ROOT_URLCONF = 'besparbema.urls'
@@ -110,7 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Tehran'
 
 USE_I18N = True
 
@@ -138,7 +139,7 @@ STATICFILES_FINDERS = [
 # }
 
 COMPRESS_ENABLED = True
-COMPRESS_OFFLINE = True
+# COMPRESS_OFFLINE = True
 
 STATIC_ROOT = BASE_DIR / 'static'
 STATIC_URL = 'static/'
