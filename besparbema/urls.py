@@ -24,4 +24,4 @@ from flatpages import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
-] + static('static/', document_root=settings.STATIC_ROOT) 
+] + static('/static/', document_root=settings.STATIC_ROOT) 

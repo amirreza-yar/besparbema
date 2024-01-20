@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-&xhjtn)t_d$hso3rm8^ckel01kq_m!aty&5@b!z7i!9a2g2=md
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
@@ -38,7 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'flatpages',
+    'compressor',
+    # 'pipeline',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -125,8 +128,17 @@ STATICFILES_DIRS = [
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
+    # 'pipeline.finders.PipelineFinder',
 ]
 
+COMPRESS_CSS_FILTERS = {
+    'css': ['compressor.filters.css_default.CssAbsoluteFilter'], 
+    'js': ['compressor.filters.jsmin.JSMinFilter']
+}
+
+COMPRESS_ENABLED = True
+COMPRESS_OFFLINE = True
 
 STATIC_ROOT = BASE_DIR / 'static'
 STATIC_URL = 'static/'
