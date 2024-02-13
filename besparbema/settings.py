@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-&xhjtn)t_d$hso3rm8^ckel01kq_m!aty&5@b!z7i!9a2g2=md'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = DEBUG = (os.getenv('DEBUG', 'False') == 'True')
 
 ALLOWED_HOSTS = ['localhost', 'bespar.liara.run', '127.0.0.1']
 
@@ -123,7 +127,8 @@ USE_TZ = True
 
 
 STATICFILES_DIRS = [
-    BASE_DIR / 'flatpages/templates/assets',
+    # BASE_DIR / 'flatpages/templates/assets',
+    BASE_DIR / 'assets'
 ]
 
 STATICFILES_FINDERS = [
@@ -134,12 +139,12 @@ STATICFILES_FINDERS = [
 ]
 
 # COMPRESS_CSS_FILTERS = {
-#     'css': ['compressor.filters.css_default.CssAbsoluteFilter'], 
+#     'css': ['compressor.filters.css_default.CssAbsoluteFilter'],
 #     'js': ['compressor.filters.jsmin.JSMinFilter']
 # }
 
 COMPRESS_ENABLED = True
-# COMPRESS_OFFLINE = True
+COMPRESS_OFFLINE = (os.getenv('COMPRESS_OFFLINE', 'False') == 'True')
 
 STATIC_ROOT = BASE_DIR / 'static'
 STATIC_URL = 'static/'

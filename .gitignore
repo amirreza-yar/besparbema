@@ -1,0 +1,7 @@
+.env
+assets_backup
+db.sqlite3
+liara_nginx.conf
+liara.json
+static
+__pycache__

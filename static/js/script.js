@@ -249,7 +249,7 @@
 		$('.time-countdown').each(function() {
 		var $this = $(this), finalDate = $(this).data('countdown');
 		$this.countdown(finalDate, function(event) {
-			var $this = $(this).html(event.strftime('' + '<div class="counter-column"><span class="count">%D</span>Days</div> ' + '<div class="counter-column"><span class="count">%H</span>Hours</div>  ' + '<div class="counter-column"><span class="count">%M</span>Minutes</div>  ' + '<div class="counter-column"><span class="count">%S</span>Seconds</div>'));
+			var $this = $(this).html(event.strftime('' + '<div class="counter-column"><span class="count">%D</span>روز</div> ' + '<div class="counter-column"><span class="count">%H</span>ساعت</div>  ' + '<div class="counter-column"><span class="count">%M</span>دقیقه</div>  ' + '<div class="counter-column"><span class="count">%S</span>ثانیه</div>'));
 		});
 	 });
 	}

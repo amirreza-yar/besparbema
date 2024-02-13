@@ -1,0 +1,231 @@
+{% extends "base.html" %}
+{% block title %}{% endblock %}
+{% block content %}
+<!-- Page Title -->
+<section
+  class="page-title"
+  style="background-image: url(/static/images/background/7.jpg)"
+>
+  <div class="auto-container">
+    <ul class="page-breadcrumb">
+      <li><a href="{% url 'home' %}" style="font-weight: 800;">خانه</a></li>
+      <li style="font-weight: 800;">ارتباط با ما</li>
+    </ul>
+    <h2 style="font-weight: 900;">ارتباط با ما</h2>
+  </div>
+</section>
+<!-- End Page Title -->
+
+<!-- Contact Info Section -->
+<section class="contact-info-section">
+  <div class="auto-container">
+    <!-- Sec Title -->
+    <div class="sec-title centered">
+      <div class="title">
+        <span class="separator"></span>اطلاعات تماس<span
+          class="separator-two"
+        ></span>
+      </div>
+      <h2>
+        برای پشتیبانی، مشاوره و اطلاعات بیشتر  <br />
+        با ما در تماس باشید
+      </h2>
+    </div>
+    <div class="row clearfix">
+      <!-- Info Column -->
+      <div class="info-column col-lg-4 col-md-6 col-sm-12">
+        <div class="inner-column">
+          <div class="icon flaticon-maps-and-flags"></div>
+          <strong>آدرس دفتر ما:</strong>
+          فارس، شیراز، برج صعنت <br />
+          طبقه اول، واحد ۱۲۴
+        </div>
+      </div>
+
+      <!-- Info Column -->
+      <div class="info-column col-lg-4 col-md-6 col-sm-12">
+        <div class="inner-column">
+          <div class="icon flaticon-telephone-1"></div>
+          <strong>اطلاعات تماس:</strong>
+          تلفن پاسخگویی : <a href="tel:+22-5-789-0001">+۷۱ ۱۲۳ ۴۵۶۷</a><br />
+          پشتیبانی و مشاوره : <a href="tel:+15-2-654-0002">+۷۱ ۱۲۳ ۴۵۶۷</a>
+        </div>
+      </div>
+
+      <!-- Info Column -->
+      <div class="info-column col-lg-4 col-md-6 col-sm-12">
+        <div class="inner-column">
+          <div class="icon flaticon-email-2"></div>
+          <strong>ایمیل مشاوره:</strong>
+          ایمیل پاسخگو : <a href="mailto:name@yourmail.com">name@yourmail.com</a><br />
+          ایمیل مشاوره : <a href="tel:+22-5-789-0001">name@yourmail.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Faq Page Section -->
+
+<!-- Map Section -->
+<section class="map-section-section">
+  <!-- Map Boxed -->
+  <div class="map-boxed">
+    <!-- Map Outer -->
+    <div class="map-outer">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d805184.6331292129!2d144.49266890254142!3d-37.97123689954809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad646b5d2ba4df7%3A0x4045675218ccd90!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2s!4v1574408946759!5m2!1sen!2s"
+        width="100%"
+        height="560px"
+        frameborder="0"
+        style="border: 0"
+        allowfullscreen=""
+      ></iframe>
+    </div>
+  </div>
+</section>
+<!-- End Map Section -->
+
+<!-- Request Quote Section -->
+<section class="request-quote-section style-three" id="contact">
+  <div class="auto-container">
+    <!-- Inner Container -->
+    <div
+      class="inner-container"
+      style="background-image: url(/static/images/background/pattern-9.png)"
+    >
+      <div class="cap-icon">
+        <img src="/static/images/resource/request-icon.png" alt="" />
+      </div>
+      <!-- Sec Title -->
+      <div class="sec-title">
+        <div class="clearfix">
+          <div class="pull-left">
+            <div class="title"><span class="separator"></span>ما چکار می‌کنیم؟</div>
+            <h2>
+              درخواست مشاوره <br />
+              برای کار و همکاری
+            </h2>
+          </div>
+          <div class="pull-right">
+            <div class="text">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ  <br />
+                و با استفاده از طراحان گرافیک است 
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Default Form -->
+      <div class="default-form contact-form">
+        <form
+          method="post"
+          action="https://html.themerange.net/kanstr/sendemail.php"
+          id="contact-form"
+        >
+          <div class="row clearfix">
+            <!-- Column -->
+            <div class="column col-lg-6 col-md-12 col-sm-12">
+              <!-- Form Group -->
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="name"
+                  value=""
+                  placeholder="نام"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <input
+                  type="email"
+                  name="email"
+                  value=""
+                  placeholder="ایمیل"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="subject"
+                  value=""
+                  placeholder="موضوع"
+                  required
+                />
+              </div>
+            </div>
+
+            <!-- Column -->
+            <div class="column col-lg-6 col-md-12 col-sm-12">
+              <div class="form-group">
+                <textarea name="message" placeholder="درخواست شما"></textarea>
+              </div>
+
+              <div class="form-group">
+                <button type="submit" class="theme-btn btn-style-four">
+                  <span class="txt" style="font-family: iranyekan; font-weight: 800;">ارسال درخواست</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!--End Default Form-->
+    </div>
+  </div>
+</section>
+<!-- End Request Quote Section -->
+
+<!-- Clients Section -->
+<section class="clients-section">
+  <div class="auto-container">
+    <div class="sponsors-outer">
+      <!-- Sponsors Carousel -->
+      <ul class="sponsors-carousel owl-carousel owl-theme">
+        <li class="slide-item">
+          <figure class="image-box">
+            <a href="#"><img src="/static/images/clients/1.png" alt="" /></a>
+          </figure>
+        </li>
+        <li class="slide-item">
+          <figure class="image-box">
+            <a href="#"><img src="/static/images/clients/2.png" alt="" /></a>
+          </figure>
+        </li>
+        <li class="slide-item">
+          <figure class="image-box">
+            <a href="#"><img src="/static/images/clients/3.png" alt="" /></a>
+          </figure>
+        </li>
+        <li class="slide-item">
+          <figure class="image-box">
+            <a href="#"><img src="/static/images/clients/4.png" alt="" /></a>
+          </figure>
+        </li>
+        <li class="slide-item">
+          <figure class="image-box">
+            <a href="#"><img src="/static/images/clients/5.png" alt="" /></a>
+          </figure>
+        </li>
+        <li class="slide-item">
+          <figure class="image-box">
+            <a href="#"><img src="/static/images/clients/1.png" alt="" /></a>
+          </figure>
+        </li>
+        <li class="slide-item">
+          <figure class="image-box">
+            <a href="#"><img src="/static/images/clients/2.png" alt="" /></a>
+          </figure>
+        </li>
+        <li class="slide-item">
+          <figure class="image-box">
+            <a href="#"><img src="/static/images/clients/3.png" alt="" /></a>
+          </figure>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- End Clients Section -->
+{% endblock %}
